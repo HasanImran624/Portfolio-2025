@@ -1,0 +1,55 @@
+<section id="about" class="section">
+  <div class="section-header">
+    <h2 class="numbered-heading">About Me</h2>
+  </div>
+  
+  <div class="about-content">
+    <div class="about-text">
+      <div>
+        <p>
+          Full Stack Software Engineer with 6֡ years of experience designing and building scalable, distributed systems and highperformance applications. Proven expertise in .NET Core, Angular, microservices, event-driven architectures, and system
+design with hands-on experience in AWS cloud, Docker, RabbitMQ, SQL/NoSQL databases, and CI/CD pipelines. Strong
+knowledge of SOLID principles, design patterns, and clean architecture, with a track record of delivering secure, reliable, and
+scalable backend solutions. Skilled collaborator experienced in cross-functional teams, driving technical solutions for
+enterprise and Legal tech startup
+        </p>
+        
+        <!--  <p>
+          Fast-forward to today, and I've had the privilege of working at 
+          <a href="#" class="inline-link">an advertising agency</a>, 
+          <a href="#" class="inline-link">a start-up</a>, 
+          <a href="#" class="inline-link">a huge corporation</a>, and 
+          <a href="#" class="inline-link">a student-led design studio</a>. 
+          My main focus these days is building accessible, inclusive products and 
+          digital experiences at <a href="#" class="inline-link">Upstatement</a> for a variety of clients.
+        </p>
+        
+        <p>
+          I also recently <a href="#" class="inline-link">launched a course</a> that covers 
+          everything you need to build a web app with the Spotify API using Node & React.
+        </p>
+         -->
+        <p>Here are a few technologies I've been working with recently:</p> 
+      </div>
+      
+      <ul class="skills-list">
+        <li *ngFor="let skill of skills" class="skill-item">
+          <span class="skill-icon">▹</span>
+          {{ skill }}
+        </li>
+      </ul>
+    </div>
+    
+    <div class="about-image">
+      <div class="image-wrapper">
+        <div class="image-placeholder">
+          <div class="placeholder-content">
+      <img src="hasan.png" alt="Hasan Imran" />
+           
+          </div>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+</section>

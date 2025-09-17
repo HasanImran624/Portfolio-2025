@@ -1,0 +1,56 @@
+<section id="experience" class="section">
+  <div class="section-header">
+    <h2 class="numbered-heading">Where I've Worked</h2>
+  </div>
+  
+  <div class="experience-content">
+    <div class="experience-tabs">
+      <div class="tab-list" role="tablist">
+        <button 
+          *ngFor="let company of getCompanyNames()" 
+          class="tab-button"
+          [class.active]="selectedCompany === company"
+          (click)="selectCompany(company)"
+          [attr.aria-selected]="selectedCompany === company"
+          role="tab">
+          {{ company }}
+        </button>
+        <div class="tab-indicator" [style.transform]="'translateY(' + (getCompanyNames().indexOf(selectedCompany) * 42) + 'px)'"></div>
+      </div>
+    </div>
+    
+    <div class="experience-details">
+      <div *ngIf="getSelectedExperience()" class="experience-panel">
+        <div class="experience-header">
+          <h3 class="experience-title">
+            {{ getSelectedExperience()?.position }} 
+            <span class="company-name">{{ getSelectedExperience()?.company }}</span>
+          </h3>
+          <p class="experience-duration">{{ getSelectedExperience()?.duration }}</p>
+        </div>
+        
+        <div class="experience-description">
+          <p>{{ getSelectedExperience()?.description }}</p>
+        </div>
+        
+        <div class="experience-achievements">
+          <ul class="achievements-list">
+            <li *ngFor="let achievement of getSelectedExperience()?.achievements" class="achievement-item">
+              <span class="achievement-icon">▹</span>
+              {{ achievement }}
+            </li>
+          </ul>
+        </div>
+        
+        <div class="experience-technologies">
+          <h4 class="tech-title">Technologies Used:</h4>
+          <div class="tech-tags">
+            <span *ngFor="let tech of getSelectedExperience()?.technologies" class="tech-tag">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

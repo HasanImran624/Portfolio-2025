@@ -1,0 +1,17 @@
+main {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--dark-navy);
+  color: var(--slate);
+  font-family: var(--font-sans);
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add some spacing for the fixed header */
+main > *:first-child {
+  margin-top: var(--nav-height);
+}

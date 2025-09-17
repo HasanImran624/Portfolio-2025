@@ -1,0 +1,37 @@
+<header class="nav" [class.nav-scrolled]="isScrolled">
+  <nav class="nav-container">
+    <div class="nav-logo">
+      <a href="#home" (click)="scrollToSection('#home')" class="nav-logo-link">
+        <span class="logo-text">Hasan Imran</span>
+      </a>
+    </div>
+    
+    <div class="nav-links" [class.nav-links-open]="isMobileMenuOpen">
+      <ol class="nav-list">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a 
+            [href]="item.href" 
+            (click)="scrollToSection(item.href)"
+            class="nav-link">
+            <span class="nav-number">{{ navItems.indexOf(item) + 1 }}.</span>
+            {{ item.name }}
+          </a>
+        </li>
+      </ol>
+      
+      <!-- <div class="nav-resume">
+        <a href="#" class="btn btn--small">Resume</a>
+      </div> -->
+    </div>
+    
+    <button 
+      class="nav-toggle"
+      [class.nav-toggle-open]="isMobileMenuOpen"
+      (click)="toggleMobileMenu()"
+      aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+</header>

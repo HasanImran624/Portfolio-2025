@@ -1,0 +1,240 @@
+.experience-content {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.experience-tabs {
+  position: relative;
+}
+
+.tab-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--lightest-navy);
+  padding-left: 0;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  text-align: left;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 2px solid transparent;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.tab-button:hover {
+  color: var(--green);
+  background-color: var(--green-tint);
+}
+
+.tab-button.active {
+  color: var(--green);
+  border-left-color: var(--green);
+}
+
+.tab-indicator {
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 2px;
+  height: 42px;
+  background-color: var(--green);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.experience-details {
+  padding-left: 1rem;
+}
+
+.experience-panel {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+}
+
+.experience-title {
+  font-size: var(--fz-xl);
+  color: var(--lightest-slate);
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.company-name {
+  color: var(--green);
+}
+
+.experience-duration {
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  margin: 0;
+}
+
+.experience-description {
+  margin-bottom: 1.5rem;
+}
+
+.experience-description p {
+  color: var(--light-slate);
+  font-size: var(--fz-lg);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.experience-achievements {
+  margin-bottom: 2rem;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--slate);
+  font-size: var(--fz-md);
+  line-height: 1.6;
+}
+
+.achievement-icon {
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  line-height: 1.6;
+}
+
+.experience-technologies {
+  margin-top: 2rem;
+}
+
+.tech-title {
+  color: var(--lightest-slate);
+  font-size: var(--fz-md);
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: var(--lightest-navy);
+  color: var(--slate);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  background-color: var(--green-tint);
+  color: var(--green);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .experience-tabs {
+    margin-bottom: 2rem;
+  }
+  
+  .tab-list {
+    flex-direction: row;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 2px solid var(--lightest-navy);
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  
+  .tab-button {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 1rem 1.5rem;
+    min-width: max-content;
+  }
+  
+  .tab-button.active {
+    border-left: none;
+    border-bottom-color: var(--green);
+  }
+  
+  .tab-indicator {
+    display: none;
+  }
+  
+  .experience-details {
+    padding-left: 0;
+  }
+  
+  .experience-title {
+    font-size: var(--fz-lg);
+  }
+  
+  .achievement-item {
+    font-size: var(--fz-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: var(--fz-xs);
+  }
+  
+  .experience-title {
+    font-size: var(--fz-md);
+  }
+  
+  .experience-description p {
+    font-size: var(--fz-md);
+  }
+  
+  .achievement-item {
+    font-size: var(--fz-xs);
+  }
+  
+  .tech-tag {
+    font-size: 10px;
+    padding: 0.2rem 0.5rem;
+  }
+}
