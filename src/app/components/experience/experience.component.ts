@@ -19,13 +19,30 @@ interface WorkExperience {
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-  selectedCompany = 'Jodayn';
+  selectedCompany = 'Takamul Technology';
   
   workExperiences: WorkExperience[] = [
     {
+      company: 'Takamul Technology',
+      position: 'Senior Software Engineer',
+      duration: 'Jan 2026 – Present',
+      location: 'Riyadh, Saudi Arabia',
+      description: 'Building a backend integration platform for a SDAIA digital-twin (DCIM) system',
+      achievements: [
+        'Built a backend integration platform for a SDAIA digital-twin (DCIM) system that ingests multi-vendor data into a unified asset hierarchy for UI and 3D visualization',
+        'Designed typed vendor adapters (Elasticsearch, DCE, ITA, CMDB, file) with a shared discovery/telemetry pipeline for create/update/delete into the domain model',
+        'Delivered a YAML/schema-driven configuration layer so connection, identity, field mapping, and parent-placement rules can change without redeploying adapter code',
+        'Implemented config-validated field mapping and value-transform pipelines that normalize heterogeneous JSON into canonical asset parameters',
+        'Built an on-demand Elasticsearch live-query engine for dashboard/KPI reads outside the asset sync path, with paging, filters, and parameterized query DSL',
+        'Owned Minimal API endpoints and run orchestration for discovery/telemetry jobs, connection tests, and live queries consumed by the digital-twin UI',
+        'Separated protocol adapters (code) from instance integration definitions (YAML) to scale new customer mappings while keeping vendor-specific fetch logic maintainable'
+      ],
+      technologies: ['.NET 10 Minimal APIs', 'EF Core', 'SQL Server', 'MongoDB', 'React', 'TypeScript', 'YAML', 'Elasticsearch']
+    },
+    {
       company: 'Jodayn',
       position: 'Senior Software Engineer',
-      duration: '2024 – Present',
+      duration: '2024 – 2025',
       location: 'Riyadh, Saudi Arabia',
       description: 'Deployed at Amanah Riyadh Municipality – Ministry',
       achievements: [
